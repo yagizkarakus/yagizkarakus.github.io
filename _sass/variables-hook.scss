@@ -1,3 +1,159 @@
 /*
   Appending custom SCSS variables will override the default ones in `_sass/addon/variables.scsss`
 */
+/*
+ * The main dark mode styles
+ */
+
+ /*
+ * The main dark mode styles
+ */
+
+@mixin dark-scheme {
+  /* Framework color */
+  --main-bg: #512b57;
+  --mask-bg: #68a86f;
+  --main-border-color: #47644b;
+
+  /* Common color */
+  --text-color: #00ff8d;
+  --text-muted-color: #00b674;
+  --heading-color: #00ff8d;
+  --blockquote-border-color: #00ff8d;
+  --blockquote-text-color: #00ff8d;
+  --link-color: #00ff8d;
+  --link-underline-color: #00b674;
+  --button-bg: #512b57;
+  --btn-border-color: #47644b;
+  --btn-backtotop-color: #00ff8d;
+  --btn-backtotop-border-color: #47644b;
+  --btn-box-shadow: #512b57;
+  --card-header-bg: #512b57;
+  --label-color: #00ff8d;
+  --checkbox-color: #00ff8d;
+  --checkbox-checked-color: #00ff8d;
+  --img-bg: radial-gradient(circle, #3f1f45 0%, #512b57 100%);
+  --shimmer-bg: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 255, 141, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  /* Sidebar */
+  --sidebar-bg: radial-gradient(circle, #512b57 0%, #68a86f 100%);
+  --sidebar-muted-color: #512b57  ;
+  --sidebar-active-color: #00ff8d;
+  --sidebar-hover-bg: #512b57;
+  --sidebar-btn-bg: rgba(108, 168, 111, 0.3);
+  --sidebar-btn-color: #512b57;
+  --avatar-border-color: rgba(168, 168, 168, 0.9);
+
+  /* Topbar */
+  --topbar-bg: rgba(81, 43, 87, 0.64);
+  --topbar-text-color: #00ff8d;
+  --search-wrapper-border-color: #6eb684;
+  --search-icon-color: #6eb684;
+  --input-focus-border-color: #909e90;
+
+  /* Home page */
+  --post-list-text-color: #00ff8d;
+  --btn-patinator-text-color: #00ff8d;
+  --btn-paginator-hover-color: #38622a;
+  --btn-paginator-border-color: #47644b;
+  --btn-text-color: #00ff8d;
+
+  /* Posts */
+  --toc-highlight: #00ff8d;
+  --tag-bg: #3a5435;
+  --tag-hover: #355635;
+  --tb-odd-bg: rgba(53, 86, 53, 0.52);
+  --tb-even-bg: #313131;
+  --tb-border-color: #355635;
+  --footnote-target-bg: #5b80b7;
+  --btn-share-color: #6c757d;
+  --btn-share-hover-color: #bfc1ca;
+  --relate-post-date: #00b674;
+  --card-bg: #2b2b39;
+  --card-hovor-bg: #545a51;
+  --card-shadow: rgba(33, 33, 33, 0.72) 0 6px 18px 0,
+    rgba(81, 81, 81, 0.24) 0 0 0 1px;
+  --kbd-wrap-color: #6a6a6a;
+  --kbd-text-color: #d3d3d3;
+  --kbd-bg-color: #242424;
+  --prompt-text-color: rgba(255, 255, 255, 0.75);
+  --prompt-tip-bg: rgba(48, 124, 63, 0.64);
+  --prompt-tip-icon-color: rgba(15, 201, 15, 0.81);
+  --prompt-info-bg: rgba(31, 94, 165, 0.8);
+  --prompt-info-icon-color: #0075d1;
+  --prompt-warning-bg: rgba(105, 90, 4, 0.88);
+  --prompt-warning-icon-color: rgba(255, 175, 0, 0.8);
+  --prompt-danger-bg: rgba(98, 34, 16, 0.8);
+  --prompt-danger-icon-color: #ff0101;
+
+  /* tags */
+  --tag-border: #5c646b;
+  --tag-shadow: #303132;
+  --search-tag-bg: #3a5435;
+  --dash-color: #404245;
+
+  /* categories */
+  --categories-border: rgba(15, 201, 15, 0.5);
+  --categories-hover-bg: #595d5f;
+  --categories-icon-hover-color: white;
+
+  /* archives */
+  --timeline-node-bg: #bfc1c5;
+  --timeline-color: #404245;
+  --timeline-year-dot-color: #404245;
+
+  .light {
+    display: none;
+  }
+
+  hr {
+    border-color: var(--main-border-color);
+  }
+
+  /* categories */
+  .categories.card,
+  .list-group-item {
+    background-color: var(--card-bg);
+  }
+
+  .categories {
+    .card-header {
+      background-color: var(--card-header-bg);
+    }
+
+    .list-group-item {
+      border-left: none;
+      border-right: none;
+      padding-left: 2rem;
+      border-color: var(--categories-border);
+
+      &:last-child {
+        border-bottom-color: var(--card-bg);
+      }
+    }
+  }
+
+  #archives li:nth-child(odd) {
+    background-image: linear-gradient(
+      to left,
+      #2a1e2e,
+      #3f2739,
+      #3f2739,
+      #3f2739,
+      #2a1e2e
+    );
+  }
+
+  color-scheme: dark;
+
+  /* stylelint-disable-next-line selector-id-pattern */
+  #disqus_thread {
+    color-scheme: none;
+  }
+} /* dark-scheme */
+

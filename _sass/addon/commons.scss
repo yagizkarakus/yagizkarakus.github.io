@@ -756,10 +756,11 @@ $btn-mb: 0.5rem;
   }
 
   .site-subtitle {
+    font-weight: bold;
     font-size: 95%;
     color: var(--sidebar-muted-color);
     margin-top: 0.25rem;
-    word-spacing: 1px;
+    word-spacing: 0.9px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -915,7 +916,7 @@ $btn-mb: 0.5rem;
 
   #breadcrumb {
     font-size: 1rem;
-    color: gray;
+    color: white;
     padding-left: 0.5rem;
 
     a:hover {
