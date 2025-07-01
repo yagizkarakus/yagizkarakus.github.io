@@ -28,8 +28,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Setup Pages
         id: pages
@@ -50,14 +48,15 @@ jobs:
         run: |
           bundle exec htmlproofer _site --disable-external --check-html --allow_hash_href
 
-      # Explicitly add the updated artifact action to avoid v3 fallback
-      - name: Upload dummy artifact to force v4 usage
+      # ⚠️ WORKAROUND: force v4 artifact action to be loaded to override transitive v3 usage
+      - name: Load artifact@v4 explicitly
         uses: actions/upload-artifact@v4
         with:
-          name: noop
-          path: ./_site/.no-op || echo "no-op"
+          name: dummy-artifact
+          path: _site/.no-such-file
+        continue-on-error: true
 
-      - name: Upload site artifact
+      - name: Upload site artifact (v2)
         uses: actions/upload-pages-artifact@v2
         with:
           path: "_site${{ steps.pages.outputs.base_path }}"
