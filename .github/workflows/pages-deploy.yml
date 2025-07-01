@@ -56,8 +56,8 @@ jobs:
           path: _site/.no-such-file
         continue-on-error: true
 
-      - name: Upload site artifact (v2)
-        uses: actions/upload-pages-artifact@v2
+      - name: Upload site artifact (v3)
+        uses: actions/upload-pages-artifact@v3
         with:
           path: "_site${{ steps.pages.outputs.base_path }}"
 
@@ -71,4 +71,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
