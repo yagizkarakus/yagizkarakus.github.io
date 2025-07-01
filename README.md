@@ -1,3 +1,14 @@
+# Docker command 
+
+```
+docker run --rm \
+  --volume="$(cygpath -w "$PWD"):/srv/jekyll" \
+  --volume="$(cygpath -w "$PWD/.jekyll-cache"):/srv/jekyll/.jekyll-cache" \
+  --publish "127.0.0.1:4000:4000" \
+  jekyll/jekyll \
+  jekyll serve --watch --livereload
+```
+
 # Chirpy Starter [![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)](https://rubygems.org/gems/jekyll-theme-chirpy) [![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
 
 When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders `/_data`, `/_layouts`, `/_includes`, `/_sass` and `/assets`, as well as a small part of options of the `/_config.yml` file from the theme's gem. If you have ever installed this theme gem, you can use the command `bundle info --path jekyll-theme-chirpy` to locate these files.
