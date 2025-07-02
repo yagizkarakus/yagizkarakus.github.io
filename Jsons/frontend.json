@@ -1,0 +1,13 @@
+{
+  "PORT": "8080",
+  "PRODUCT_CATALOG_SERVICE_ADDR": "butique-productcatalogservice:3550",
+  "CURRENCY_SERVICE_ADDR": "butique-currencyservice:7000",
+  "CART_SERVICE_ADDR": "butique-cartservice:7070",
+  "RECOMMENDATION_SERVICE_ADDR": "butique-recommendationservice:8080",
+  "SHIPPING_SERVICE_ADDR": "butique-shippingservice:50051",
+  "CHECKOUT_SERVICE_ADDR": "butique-checkoutservice:5050",
+  "AD_SERVICE_ADDR": "butique-adservice:9555",
+  "SHOPPING_ASSISTANT_SERVICE_ADDR": "butique-shoppingassistantservice:80",
+  "ENV_PLATFORM": "HWC",
+  "ENABLE_PROFILER": "0"
+}

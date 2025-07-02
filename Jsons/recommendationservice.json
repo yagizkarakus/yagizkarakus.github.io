@@ -1,0 +1,5 @@
+{
+  "PORT": "8080",
+  "PRODUCT_CATALOG_SERVICE_ADDR": "butique-productcatalogservice:3550",
+  "DISABLE_PROFILER": ""
+}
